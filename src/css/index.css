@@ -1,0 +1,389 @@
+@charset "UTF-8";
+body,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+input,
+select,
+textarea,
+button,
+th,
+td,
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+dl,
+ol {
+  list-style: none;
+}
+
+img,
+fieldset,
+input[type=submit] {
+  border: 0 none;
+}
+
+em {
+  font-style: normal;
+}
+
+strong {
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+input[type=button] {
+  cursor: pointer;
+  border: 0 none;
+}
+
+/* 去掉移动端点击有背景色 */
+label {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+a,
+button,
+input,
+img {
+  -webkit-touch-callout: none;
+}
+
+img {
+  pointer-events: none;
+  /*禁止图片的点击事件，例如长按保存图片*/
+  vertical-align: top;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+  line-height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+html,
+body {
+  /*禁止用户选择元素*/
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  /*禁止元素点击出现半透明黑色背景*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* 针对移动端 */
+html {
+  height: 100%;
+  width: 100%;
+  font-family: "Heiti SC", "Microsoft YaHei", "sans-serif";
+  outline: 0;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+
+/*
+
+  单位换算
+    rem 实质上是算比例，设计图尺寸 / 1 比 1设计图时的跟字体大小  
+*/
+body {
+  padding-top: 75px;
+  padding-bottom: 67.5px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background: #fff;
+  padding: 8.5px 11.5px 5px;
+  z-index: 10;
+}
+header .logo {
+  width: 61.5px;
+  height: 61.5px;
+  font-size: 0;
+}
+header .logo img {
+  width: 100%;
+  height: 100%;
+}
+header .searchBar {
+  width: 2.64rem;
+  height: 25px;
+  border: 1px solid #ff9344;
+  border-radius: 25px;
+  background: #fff;
+  font-size: 0;
+  overflow: hidden;
+  margin: 17px auto 0;
+}
+header .searchBar input[type=text] {
+  width: calc(100% - 25px);
+  height: 100%;
+  border: 0 none;
+  padding-left: 10px;
+  padding-right: 4px;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #333;
+}
+header .searchBar input[type=image] {
+  width: 18.5px;
+  height: 17.5px;
+  vertical-align: middle;
+}
+header .cityBar {
+  width: 78.5px;
+  height: 27px;
+  font-size: 0;
+  border: 1px solid #ff9344;
+  margin-top: 15px;
+}
+header .cityBar select {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/images/home/jiantou.png);
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-size: 15px 7.5px;
+  border: 0 none;
+  padding-left: 7.5px;
+}
+header .cityBar select option {
+  width: 100%;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #fff;
+  padding-bottom: 15px;
+}
+#main .content {
+  width: 100%;
+  height: 2.58rem;
+}
+#main .content a {
+  display: block;
+  height: 100%;
+}
+#main .content a img {
+  width: 100%;
+  height: 100%;
+}
+#main .youhui {
+  padding: 25px 15px 0;
+}
+#main .youhui .title {
+  font-size: 0;
+  position: relative;
+  line-height: 0.54rem;
+}
+#main .youhui .title h4 {
+  font-weight: normal;
+  font-size: 0.3rem;
+  display: inline-block;
+}
+#main .youhui .title h4 img {
+  width: 0.56rem;
+  height: 0.54rem;
+  vertical-align: middle;
+}
+#main .youhui .title .more {
+  display: inline-block;
+}
+#main .youhui .title .more a {
+  color: #000;
+  font-size: 0.24rem;
+  vertical-align: middle;
+}
+#main .youhui .title .more a i {
+  display: inline-block;
+  font-size: 0.25rem;
+  color: #ff9344;
+}
+#main .youhui ul {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 0.16rem;
+  padding-left: 0.56rem;
+}
+#main .youhui ul li {
+  width: 50%;
+  height: 0.97rem;
+  float: left;
+  margin-bottom: 0.3rem;
+}
+#main .youhui ul li img {
+  width: 2.4rem;
+  height: 0.97rem;
+}
+#main .like {
+  padding: 0px 15px;
+}
+#main .like .title {
+  font-size: 0;
+  position: relative;
+  line-height: 0.54rem;
+}
+#main .like .title h4 {
+  font-weight: normal;
+  font-size: 0.3rem;
+  display: inline-block;
+}
+#main .like .title h4 img {
+  width: 0.56rem;
+  height: 0.54rem;
+  vertical-align: middle;
+}
+#main .like .title .more {
+  display: inline-block;
+}
+#main .like .title .more a {
+  color: #000;
+  font-size: 0.24rem;
+  vertical-align: middle;
+}
+#main .like .title .more a i {
+  display: inline-block;
+  font-size: 0.25rem;
+  color: #ff9344;
+}
+#main .like .product {
+  margin-top: 0.3rem;
+}
+#main .like .product .product-item {
+  font-size: 0;
+}
+#main .like .product .product-item:not(:last-of-type) {
+  margin-bottom: 0.3rem;
+}
+#main .like .product .product-item img {
+  width: 28.133%;
+  height: 1.64rem;
+  vertical-align: top;
+}
+#main .like .product .product-item .item-right {
+  display: inline-block;
+  width: 71.867%;
+  color: #494949;
+  font-size: 0.22rem;
+  padding-left: 10.5px;
+}
+#main .like .product .product-item .item-right .product-name {
+  padding-top: 14px;
+}
+#main .like .product .product-item .item-right .product-name a {
+  font-size: 0.3rem;
+  color: #000;
+}
+#main .like .product .product-item .item-right .meal {
+  margin-top: 0.18rem;
+  margin-bottom: 0.18rem;
+}
+#main .like .product .product-item .item-right .meal span:first-child {
+  margin-right: 0.1rem;
+}
+#main .like .product .product-item .item-right .price-wrap span.price {
+  color: #ff9344;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 67.5px;
+  background: #fff;
+  box-sizing: border-box;
+}
+footer .footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 7px 25px;
+}
+footer .footer-nav li {
+  width: calc(100% / 4);
+  text-align: center;
+  font-size: 0;
+}
+footer .footer-nav li a {
+  color: #000;
+  font-size: 0;
+}
+footer .footer-nav li a i {
+  display: block;
+  color: #ff9344;
+  font-size: 35px;
+  margin-bottom: 4px;
+}
+footer .footer-nav li a span {
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=index.css.map */

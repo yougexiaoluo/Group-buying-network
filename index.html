@@ -8,13 +8,213 @@
   <meta http-equiv='X-UA-Compatible' content='ie=edge,chrome=1'>
   <meta name='format-detection' content='email=no,telephone=no'>
   <meta name='renderer' content='webkit'>
-  <title>Document</title>
-  <!-- <link rel='shortcut icon' href='./favicon.ico' type='image/x-icon'> -->
+  <title>团购网-web端</title>
+  <link rel='shortcut icon' href='./favicon.ico' type='image/x-icon'>
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1155880_6u7h2qdtpt4.css">
   <link rel='stylesheet' href='./src/css/index.css'>
 </head>
 
 <body>
+  <!-- 顶部 -->
+  <header class="clearfix">
+    <!-- logo -->
+    <div class="logo fl">
+      <img src="./src/assets/images/home/logo.png" alt="">
+    </div>
+    <!-- city -->
+    <div class="cityBar fr">
+      <select name="city" id="city">
+        <option value="guangzhoushi">广州市</option>
+        <option value="shenzhenshi">深圳市</option>
+      </select>
+    </div>
+    <!-- searchBar -->
+    <div class="searchBar">
+      <!-- <form action="#" method="POST"> -->
+      <input type="text" placeholder="请输入商品名称">
+      <input type="image" src="./src/assets/images/home/fangdajing.png" />
+      <!-- <button type="submit">
+          <i class="iconfont"></i>
+        </button> -->
+      <!-- </form> -->
+    </div>
 
+  </header>
+  <!-- 主体部分 -->
+  <div id="main">
+    <!-- content -->
+    <div class="content">
+      <a href="javascript:;">
+        <img src="./src/assets/images/home/content.jpg" alt="">
+      </a>
+    </div>
+    <!-- 团购优惠 -->
+    <div class="youhui">
+      <div class="title clearfix">
+        <h4 class="fl">
+          <img src="./src/assets/images/home/icon1.png" alt="">
+          优惠团购
+        </h4>
+        <div class="more fr">
+          <a href="javascript:;">
+            更多
+            <i class="iconfont icon-arrowrightbold"></i>
+          </a>
+        </div>
+      </div>
+      <ul class="clearfix">
+        <li><img src="./src/assets/images/home/goods.jpg" alt=""></li>
+        <li><img src="./src/assets/images/home/goods2.jpg" alt=""></li>
+        <li><img src="./src/assets/images/home/goods3.jpg" alt=""></li>
+        <li><img src="./src/assets/images/home/goods4.jpg" alt=""></li>
+      </ul>
+    </div>
+    <!-- 猜你喜欢 -->
+    <div class="like">
+      <div class="title clearfix">
+        <h4 class="fl">
+          <img src="./src/assets/images/home/icon3.png" alt="">
+          猜你喜欢
+        </h4>
+        <div class="more fr">
+          <a href="javascript:;">
+            更多
+            <i class="iconfont icon-arrowrightbold"></i>
+          </a>
+        </div>
+      </div>
+      <ul class="clearfix product">
+        <li class="product-item item-01">
+          <img src="./src/assets/images/home/food.jpg" alt="">
+          <div class="item-right">
+            <!-- 商品名称 -->
+            <div class="product-name clearfix">
+              <a class="fl" href="javascript:;">万岁寿司（正佳店）</a>
+              <span class="fr">&lt;100m</span>
+            </div>
+            <!-- 套餐 -->
+            <div class="meal">
+              <span>[100店通用]</span><span>双人套餐</span>
+            </div>
+            <!-- 价格 -->
+            <div class="price-wrap clearfix">
+              <span class="price fl">&yen; 88.00</span>
+              <span class="volume fr">已售1000</span>
+            </div>
+          </div>
+        </li>
+        <li class="product-item item-02">
+          <img src="./src/assets/images/home/food2.jpg" alt="">
+          <div class="item-right">
+            <!-- 商品名称 -->
+            <div class="product-name clearfix">
+              <a class="fl" href="javascript:;">周黑鸭（正佳店）</a>
+              <span class="fr">&lt;100m</span>
+            </div>
+            <!-- 套餐 -->
+            <div class="meal">
+              <span>[100店通用]</span><span>双人套餐</span>
+            </div>
+            <!-- 价格 -->
+            <div class="price-wrap clearfix">
+              <span class="price fl">&yen; 88.00</span>
+              <span class="volume fr">已售1000</span>
+            </div>
+          </div>
+        </li>
+        <li class="product-item item-03">
+          <img src="./src/assets/images/home/food.jpg" alt="">
+          <div class="item-right">
+            <!-- 商品名称 -->
+            <div class="product-name clearfix">
+              <a class="fl" href="javascript:;">万岁寿司（正佳店）</a>
+              <span class="fr">&lt;100m</span>
+            </div>
+            <!-- 套餐 -->
+            <div class="meal">
+              <span>[100店通用]</span><span>双人套餐</span>
+            </div>
+            <!-- 价格 -->
+            <div class="price-wrap clearfix">
+              <span class="price fl">&yen; 88.00</span>
+              <span class="volume fr">已售1000</span>
+            </div>
+          </div>
+        </li>
+        <li class="product-item item-04">
+          <img src="./src/assets/images/home/food2.jpg" alt="">
+          <div class="item-right">
+            <!-- 商品名称 -->
+            <div class="product-name clearfix">
+              <a class="fl" href="javascript:;">周黑鸭（正佳店）</a>
+              <span class="fr">&lt;100m</span>
+            </div>
+            <!-- 套餐 -->
+            <div class="meal">
+              <span>[100店通用]</span><span>双人套餐</span>
+            </div>
+            <!-- 价格 -->
+            <div class="price-wrap clearfix">
+              <span class="price fl">&yen; 88.00</span>
+              <span class="volume fr">已售1000</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 底部 -->
+  <footer>
+    <ul class="footer-nav">
+      <li>
+        <a href="javascript:;">
+          <i class="iconfont icon-home"></i>
+          <span>首页</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <i class="iconfont icon-fenlei"></i>
+          <span>分类</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <i class="iconfont icon-icon-test"></i>
+          <span>发现</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <i class="iconfont icon-me"></i>
+          <span>我的</span>
+        </a>
+      </li>
+    </ul>
+  </footer>
 </body>
+<script>
+  document.body.style.height = window.innerHeight + "px";
+
+  /*动态改变根元素字体大小*/
+  function recalc() {
+    // 获取客户端宽度
+    var clientWidth = document.documentElement.clientWidth;
+    if (!clientWidth) return;
+    // 字体大小   = 1个rem单位表示多少个像素（设备的宽度   /设计宽度）
+    document.documentElement.style.fontSize = 100 * (clientWidth / 750) + 'px';
+
+  }
+
+  function initRecalc() {
+    recalc();
+    // if(浏览器支持横竖屏切换的事件){横竖屏事件}else{ resize事件 }
+    var resizeEvt = 'osrientationchange' in window ? 'orientationchange' : 'resize';
+    if (!document.addEventListener) return;
+    window.addEventListener(resizeEvt, recalc, false);
+    document.addEventListener('DOMContentLoaded', recalc, false);
+  }
+  initRecalc();
+</script>
 
 </html>

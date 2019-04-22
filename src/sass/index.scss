@@ -1,0 +1,300 @@
+@charset 'utf-8';
+@import './common/_reset';
+@import './common/_common';
+/*
+
+  单位换算
+    rem 实质上是算比例，设计图尺寸 / 1 比 1设计图时的跟字体大小  
+*/
+
+@function r($px) {
+  @return ($px / 100) * 1rem;
+}
+
+// 通常设计图是2倍图，变成1倍图
+@function half($px) {
+  @return ($px / 2) * 1px;
+}
+
+// 主题色
+$orange: #ff9344;
+
+body {
+  padding-top: half(150);
+  padding-bottom: half(135);
+}
+
+// 公用代码块
+@mixin title {
+  .title {
+    font-size: 0;
+    position: relative;
+    line-height: r(54);
+
+    h4 {
+      font-weight: normal;
+      font-size: r(30);
+      display: inline-block;
+
+      img {
+        width: r(56);
+        height: r(54);
+        // margin-right: half(8);
+        vertical-align: middle;
+      }
+    }
+
+    // 更多
+    .more {
+      display: inline-block;
+
+      a {
+        color: #000;
+        font-size: r(24);
+        vertical-align: middle;
+
+        i {
+          display: inline-block;
+          font-size: r(25);
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+
+// 顶部
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // 如果是横屏时，可操作的区域就很小了，不能完全依赖于rem单位进行布局
+  // height: r(150);
+  height: half(150);
+  background: #fff;
+  padding: half(17) half(23) half(10);
+  z-index: 10;
+  // logo 
+  .logo {
+    width: half(123);
+    height: half(123);
+    font-size: 0;
+
+    @include imgWH;
+  }
+
+  // searchBar 
+  .searchBar {
+    width: r(264);
+    height: half(50);
+    border: 1px solid $orange;
+    border-radius: half(50);
+    background: #fff;
+    font-size: 0;
+    overflow: hidden;
+    margin: half(34) auto 0;
+
+    input[type=text] {
+      width: calc(100% - 25px);
+      height: 100%;
+      border: 0 none;
+      // text-indent: 2em;
+      padding-left: 10px;
+      padding-right: 4px;
+      vertical-align: middle;
+      font-size: 12px;
+      color: #333;
+    }
+
+    input[type=image] {
+      width: half(37);
+      height: half(35);
+      vertical-align: middle;
+    }
+  }
+
+  // cityBar 
+  .cityBar {
+    width: half(157);
+    height: half(54);
+    font-size: 0;
+    border: 1px solid $orange;
+    margin-top: half(30);
+
+    select {
+      // 重置浏览器默认下拉框的小三角
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 100%;
+      background-image: url(../assets/images/home/jiantou.png);
+      background-repeat: no-repeat;
+      // background-position: calc(100% - 5px) center;
+      background-position: right 5px center;
+      background-size: 15px 7.5px;
+      border: 0 none;
+      padding-left: half(15);
+      option {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// 主体部分
+#main {
+  // position: absolute;
+  // top: half(150);
+  // bottom: half(135);
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #fff;
+  padding-bottom: half(30);
+  // content 
+  .content {
+    width: 100%;
+    height: r(258);
+
+    a {
+      display: block;
+      height: 100%;
+      // img
+      @include imgWH;
+    }
+  }
+
+  // 团购优惠
+  .youhui {
+    padding: 25px 15px 0;
+    // 优惠标题
+    @include title;
+
+    // 优惠项目
+    ul {
+      width: 100%;
+      box-sizing: border-box;
+      padding-top: r(16);
+      padding-left: r(56);
+
+      li {
+        width: 50%;
+        height: r(97);
+        float: left;
+        margin-bottom: r(30);
+
+        img {
+          // width: 80%;
+          width: r(240);
+          height: r(97);
+        }
+      }
+    }
+  }
+
+  // 猜你喜欢
+  .like {
+    // 标题 
+    @include title;
+    padding: 0px 15px;
+
+    // 商品
+    .product {
+      margin-top: r(30);
+
+      .product-item {
+        font-size: 0;
+
+        &:not(:last-of-type) {
+          margin-bottom: r(30);
+        }
+
+        img {
+          width: 28.133%;
+          height: r(164);
+          vertical-align: top;
+        }
+
+        .item-right {
+          display: inline-block;
+          width: 100% - 28.133;
+          color: #494949;
+          font-size: r(22);
+          padding-left: half(21);
+
+          // 商品名称
+          .product-name {
+            padding-top: half(28);
+
+            a {
+              font-size: r(30);
+              color: #000;
+            }
+          }
+
+          // 套餐
+          .meal {
+            margin-top: r(18);
+            margin-bottom: r(18);
+
+            span {
+              &:first-child {
+                margin-right: r(10);
+              }
+            }
+          }
+
+          // 价格
+          .price-wrap {
+            span.price {
+              color: $orange;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 底部
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  // height: r(135);
+  height: half(135);
+  background: #fff;
+  box-sizing: border-box;
+
+  // 底部导航
+  .footer-nav {
+    @include flex(space-between, stretch);
+    padding: half(14) half(50);
+
+    li {
+      width: calc(100% / 4);
+      text-align: center;
+      font-size: 0;
+
+      a {
+        color: #000;
+        font-size: 0;
+
+        i {
+          display: block;
+          color: $orange;
+          font-size: half(70);
+          margin-bottom: 4px;
+        }
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+}
