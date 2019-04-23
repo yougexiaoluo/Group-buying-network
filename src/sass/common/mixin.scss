@@ -1,0 +1,23 @@
+@charset 'uft-8';
+
+// 设置背景
+@mixin setBgc($url, $pos, $size, $repeat:no-repeat) {
+  background-image: $url;
+  background-repeat: $repeat;
+  background-position: $pos; 
+  background-size: $size; 
+}
+
+// 弹性布局 -- flexbox
+@mixin flex($x:flex-start, $y:flex-start) {
+  display: flex;
+  justify-content: $x;
+  align-items: $y; 
+} 
+
+@mixin imgWH {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

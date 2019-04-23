@@ -1,0 +1,162 @@
+@charset 'utf-8';
+// 初始化样式文件
+@import './common/_reset.scss';
+// 公共代码块
+@import './common/mixin.scss';
+// 公共样式（头部、底部） 
+@import './common/header.scss';
+
+
+// content 
+#main {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  // banner 
+  .banner {
+    position: relative;
+    padding-bottom: r(50);
+
+    .type-name {
+      @include flex(space-between);
+      text-align: center;
+
+      // 类型
+      .item {
+        a {
+          display: block;
+          font-size: r(26);
+          color: #000;
+
+          img {
+            display: block;
+            width: r(149);
+            // height: r(149);
+            margin-bottom: r(9);
+          }
+
+          // 文本
+          span {}
+        }
+      }
+    }
+
+    // 控制按钮
+    .controls {
+      position: absolute;
+      left: 50%;
+      bottom: r(16);
+      transform: translateX(-50%);
+
+      .btn {
+        width: r(19);
+        height: r(19);
+        border-radius: 50%;
+        background: #ffc9a1;
+        float: left;
+      }
+
+      // 激活类
+      .btn.active {
+        background: #ff9344;
+      }
+
+      // 排除最后一个有margin-right
+      .btn:not(:last-of-type) {
+        margin-right: r(6);
+      }
+    }
+  }
+
+  // type 
+  .type {
+    &:not(:last-of-type) {
+      margin-bottom: r(52);
+    }
+
+    // 标题部分
+    .type-title {
+      @include flex(space-between, center);
+      margin-bottom: r(38);
+
+      .title {
+        img {
+          width: r(52);
+          height: r(42);
+          margin-right: r(9);
+        }
+
+        span {
+          font-size: r(30);
+        }
+      }
+
+      .more {
+        a {
+          display: block;
+          font-size: 0;
+          color: #000;
+
+          span {
+            font-size: r(24);
+
+          }
+
+          i {
+            width: r(25);
+            height: r(25);
+            font-size: r(25);
+            color: $orange;
+            margin-left: r(8);
+          }
+        }
+      }
+    }
+
+    // 类型商品
+    .items {
+      @include flex(space-between);
+
+      li {
+        a {
+          display: block;
+
+          img {
+            width: r(133);
+            // height: r(133);
+          }
+        }
+      }
+    }
+
+    // type-02
+    &#motion {
+      .type-title {
+        .title {
+          img {
+            width: r(48);
+            height: r(58);
+            margin-right: r(15);
+            vertical-align: bottom;
+            // margin-top: -10px;
+          }
+        }
+      }
+    }
+
+    // type-03
+    &#motion {
+      .type-title {
+        .title {
+          img {
+            width: r(53);
+            // height: r(53);
+            margin-right: r(19);
+          }
+        }
+      }
+    }
+    // .....
+  }
+}

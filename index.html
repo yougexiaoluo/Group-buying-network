@@ -30,13 +30,14 @@
     </div>
     <!-- searchBar -->
     <div class="searchBar">
-      <!-- <form action="#" method="POST"> -->
-      <input type="text" placeholder="请输入商品名称">
-      <input type="image" src="./src/assets/images/home/fangdajing.png" />
-      <!-- <button type="submit">
-          <i class="iconfont"></i>
-        </button> -->
-      <!-- </form> -->
+      <form action="#" method="POST">
+        <input type="text" placeholder="请输入商品名称">
+
+        <!-- <input type="image" src="./src/assets/images/home/fangdajing.png" /> -->
+        <button type="submit" onclick="return">
+          <i class="iconfont icon-search"></i>
+        </button>
+      </form>
     </div>
 
   </header>
@@ -173,7 +174,7 @@
         </a>
       </li>
       <li>
-        <a href="javascript:;">
+        <a href="./src/pages/category.html">
           <i class="iconfont icon-fenlei"></i>
           <span>分类</span>
         </a>
@@ -193,28 +194,6 @@
     </ul>
   </footer>
 </body>
-<script>
-  document.body.style.height = window.innerHeight + "px";
-
-  /*动态改变根元素字体大小*/
-  function recalc() {
-    // 获取客户端宽度
-    var clientWidth = document.documentElement.clientWidth;
-    if (!clientWidth) return;
-    // 字体大小   = 1个rem单位表示多少个像素（设备的宽度   /设计宽度）
-    document.documentElement.style.fontSize = 100 * (clientWidth / 750) + 'px';
-
-  }
-
-  function initRecalc() {
-    recalc();
-    // if(浏览器支持横竖屏切换的事件){横竖屏事件}else{ resize事件 }
-    var resizeEvt = 'osrientationchange' in window ? 'orientationchange' : 'resize';
-    if (!document.addEventListener) return;
-    window.addEventListener(resizeEvt, recalc, false);
-    document.addEventListener('DOMContentLoaded', recalc, false);
-  }
-  initRecalc();
-</script>
+<script src="./src/js/common.js"></script>
 
 </html>

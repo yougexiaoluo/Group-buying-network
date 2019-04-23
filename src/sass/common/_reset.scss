@@ -1,4 +1,5 @@
 @charset 'utf-8';
+
 body,
 p,
 ul,
@@ -55,7 +56,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
- 
+
 button,
 input[type="button"] {
   cursor: pointer;
@@ -76,7 +77,7 @@ img {
 }
 
 img {
-  pointer-events: none;
+  // pointer-events: none;
   /*禁止图片的点击事件，例如长按保存图片*/
   vertical-align: top;
 }
@@ -134,6 +135,10 @@ html {
 
 body {
   height: 100%;
+  overflow: hidden;
   margin: 0;
   position: relative;
+
+  // 此产品使用rem进行布局，根据html的font-size大小进行等比例缩放，布局时会出现line-height很高的等情况，重新设置font-size大小
+  font-size: 16px;
 }

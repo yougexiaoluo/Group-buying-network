@@ -1,0 +1,333 @@
+@charset "UTF-8";
+body,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+input,
+select,
+textarea,
+button,
+th,
+td,
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+dl,
+ol {
+  list-style: none;
+}
+
+img,
+fieldset,
+input[type=submit] {
+  border: 0 none;
+}
+
+em {
+  font-style: normal;
+}
+
+strong {
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+input[type=button] {
+  cursor: pointer;
+  border: 0 none;
+}
+
+/* 去掉移动端点击有背景色 */
+label {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+a,
+button,
+input,
+img {
+  -webkit-touch-callout: none;
+}
+
+img {
+  /*禁止图片的点击事件，例如长按保存图片*/
+  vertical-align: top;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+  line-height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+html,
+body {
+  /*禁止用户选择元素*/
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  /*禁止元素点击出现半透明黑色背景*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* 针对移动端 */
+html {
+  height: 100%;
+  width: 100%;
+  font-family: "Heiti SC", "Microsoft YaHei", "sans-serif";
+  outline: 0;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  font-size: 16px;
+}
+
+/*
+  单位换算
+    rem 实质上是算比例，设计图尺寸 / 1 比 1设计图时的跟字体大小   
+*/
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 67.5px;
+  background: #fff;
+  box-sizing: border-box;
+}
+footer .footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 6px 25px;
+}
+footer .footer-nav li {
+  width: calc(100% / 4);
+  text-align: center;
+  font-size: 0;
+}
+footer .footer-nav li a {
+  color: #000;
+  font-size: 0;
+}
+footer .footer-nav li a i {
+  display: block;
+  color: #ff9344;
+  font-size: 35px;
+  margin-bottom: 4px;
+}
+footer .footer-nav li a span {
+  font-size: 12px;
+}
+
+body {
+  padding: 52.5px 11.5px 67.5px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 52.5px;
+  background: #fff;
+  padding: 24px 11.5px 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+header .back-btn {
+  width: 61.5px;
+  height: 28.5px;
+  border: 1px solid #ff9344;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 28.5px;
+}
+header .category-title {
+  flex: 2;
+  height: 100%;
+  font-size: 13px;
+  font-weight: normal;
+  text-align: center;
+}
+header .cityBar {
+  width: 79.5px;
+  height: 28px;
+  border: 1px solid #ff9344;
+  border-radius: 2px;
+  position: relative;
+}
+header .cityBar select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-image: url(../assets/images/home/jiantou.png);
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-size: 15px 7.5px;
+  padding-left: 7.5px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+header .cityBar select option {
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#main .banner {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+#main .banner .type-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: center;
+}
+#main .banner .type-name .item a {
+  display: block;
+  font-size: 0.26rem;
+  color: #000;
+}
+#main .banner .type-name .item a img {
+  display: block;
+  width: 1.49rem;
+  margin-bottom: 0.09rem;
+}
+#main .banner .controls {
+  position: absolute;
+  left: 50%;
+  bottom: 0.16rem;
+  transform: translateX(-50%);
+}
+#main .banner .controls .btn {
+  width: 0.19rem;
+  height: 0.19rem;
+  border-radius: 50%;
+  background: #ffc9a1;
+  float: left;
+}
+#main .banner .controls .btn.active {
+  background: #ff9344;
+}
+#main .banner .controls .btn:not(:last-of-type) {
+  margin-right: 0.06rem;
+}
+#main .type:not(:last-of-type) {
+  margin-bottom: 0.52rem;
+}
+#main .type .type-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.38rem;
+}
+#main .type .type-title .title img {
+  width: 0.52rem;
+  height: 0.42rem;
+  margin-right: 0.09rem;
+}
+#main .type .type-title .title span {
+  font-size: 0.3rem;
+}
+#main .type .type-title .more a {
+  display: block;
+  font-size: 0;
+  color: #000;
+}
+#main .type .type-title .more a span {
+  font-size: 0.24rem;
+}
+#main .type .type-title .more a i {
+  width: 0.25rem;
+  height: 0.25rem;
+  font-size: 0.25rem;
+  color: #ff9344;
+  margin-left: 0.08rem;
+}
+#main .type .items {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#main .type .items li a {
+  display: block;
+}
+#main .type .items li a img {
+  width: 1.33rem;
+}
+#main .type#motion .type-title .title img {
+  width: 0.48rem;
+  height: 0.58rem;
+  margin-right: 0.15rem;
+  vertical-align: bottom;
+}
+#main .type#motion .type-title .title img {
+  width: 0.53rem;
+  margin-right: 0.19rem;
+}
+
+/*# sourceMappingURL=category.css.map */
