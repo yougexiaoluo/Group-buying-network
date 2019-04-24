@@ -177,14 +177,22 @@ footer .footer-nav li a span {
   font-size: 12px;
 }
 
+body {
+  padding: 62.5px 0 67.5px;
+}
+
+#main {
+  padding: 0 11.5px;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 52.5px;
+  height: 62.5px;
   background: #fff;
-  padding: 24px 11.5px 18px;
+  padding: 24px 11.5px 9px;
   position: fixed;
   top: 0;
   left: 0;
@@ -201,6 +209,8 @@ header .back-btn {
 header .category-title {
   flex: 2;
   height: 100%;
+  height: 28.5px;
+  line-height: 28.5px;
   font-size: 13px;
   font-weight: normal;
   text-align: center;
@@ -232,7 +242,6 @@ header .cityBar select option {
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
-  padding: 52.5px 11.5px 75px;
 }
 #main .search-area .searchBar {
   width: 2.66rem;
@@ -374,6 +383,9 @@ header .cityBar select option {
   color: #ff9344;
   font-size: 12.5px;
 }
+#main .hot-search-w h5 i {
+  vertical-align: bottom;
+}
 #main .hot-search-w .hot-search-items {
   display: grid;
   grid-auto-flow: row dense;
@@ -406,6 +418,9 @@ header .cityBar select option {
 #main .hot-search-w .hot-search-items .item-04 {
   width: 2.15rem;
   height: 1.97rem;
+}
+#main .recommend-w {
+  margin-bottom: 20px;
 }
 #main .recommend-w .search-t {
   display: flex;

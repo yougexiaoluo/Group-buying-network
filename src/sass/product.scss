@@ -1,0 +1,212 @@
+@charset 'utf-8';
+// 初始化样式文件
+@import './common/_reset.scss';
+// 公共代码块  
+@import './common/_mixin.scss';
+// 公共样式（头部、底部） 
+@import './common/_header.scss';
+
+// 顶部
+header {
+  .stars {
+    i {
+      color: $orange;
+      font-size: half(52);
+    }
+  }
+}
+
+$color: #ff9344;
+
+#main {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  .product {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: r(260);
+    }
+
+    // 价格
+    .price-w {
+      @include flex(space-between, center);
+      padding: half(36) half(22) 0;
+      margin-bottom: half(51);
+
+      strong {
+        color: $orange;
+        font-size: half(72);
+
+        span {
+          margin-left: half(8);
+        }
+      }
+
+      // btn 
+      .buy {
+        background: $color;
+        border-radius: half(20);
+        color: #fff;
+        font-size: half(30);
+        padding: half(15) half(26);
+      }
+    }
+
+    // praise 
+    .praise {
+      font-size: 0;
+      padding: 0 half(22);
+      margin-bottom: half(36);
+
+      .left {
+        // display: inline-block;
+        font-size: half(30);
+        line-height: half(36);
+
+        height: half(36);
+
+        i {
+          color: $color;
+          font-size: half(38);
+          margin-right: half(13);
+        }
+
+        strong {
+          font-size: half(30);
+          color: $color;
+        }
+      }
+
+      .right {
+        line-height: half(36);
+        height: half(36);
+
+        // display: inline-block;
+        a {
+          font-size: half(26);
+          color: #8e8e8e;
+
+          i {
+            font-size: half(26);
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+
+  // 适用商户
+  .merchant-w {
+    padding: 0 half(22);
+
+    .title {
+      color: #fff;
+      background: $color;
+      font-weight: normal;
+      padding: half(19) half(9) half(17) half(11);
+      position: relative;
+
+      &:after {
+        content: '\e611';
+        position: absolute;
+        top: 50%;
+        right: half(10);
+        transform: translateY(-50%);
+        font-size: half(47);
+        font-family: iconfont;
+        // color: #fff;
+      }
+    }
+
+    // 门店
+    .store-lis {
+      .store-item {
+        @include flex(flex-start, center);
+        margin-top: r(10);
+
+        img {
+          width: half(177);
+          height: half(177);
+        }
+
+        // right text
+        .right {
+          width: calc(100% - 88px);
+          font-size: 0;
+          padding-left: half(23);
+          padding-top: half(13);
+          padding-right: half(120);
+          position: relative;
+
+          .store-item-t {
+            font-size: half(30);
+            margin-bottom: half(9);
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+
+          // 星级
+          .stars {
+            font-size: 0;
+
+            i {
+              color: $color;
+              font-size: r(36);
+
+              &:not(:last-of-type) {
+                margin-right: r(2);
+              }
+            }
+
+            // text 
+            strong {
+              font-size: half(26);
+              color: #929292;
+              margin-left: half(10);
+            }
+          }
+
+          // 距离
+          .distance {
+            color: #929292;
+            font-size: half(24);
+            margin-bottom: half(8);
+            margin-top: half(5);
+          }
+
+          // detail
+          a.detail {
+            color: $color;
+            font-size: half(20);
+          }
+
+          // button 
+          input[type=button] {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: half(111);
+            height: half(59);
+            background: $color;
+            border-radius: half(20);
+            color: #fff;
+            text-align: center;
+            line-height: half(59);
+            font-size: half(30);
+            outline: none;
+            -webkit-appearance: none;
+          }
+        }
+      }
+    }
+
+    // 测试使用
+    margin-bottom: half(20);
+  }
+}

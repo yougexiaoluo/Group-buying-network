@@ -1,0 +1,265 @@
+@charset 'utf-8';
+// 初始化样式文件
+@import './common/_reset.scss';
+// 公共代码块 
+@import './common/_mixin.scss';
+// 公共样式（头部、底部） 
+@import './common/_header.scss';
+
+
+// 顶部
+header {
+  .tidings {
+    // 使用行内块的方式去布局，会有空白间隙，防止出现
+    font-size: 0;
+
+    i {
+      display: inline-block;
+      width: half(62);
+      height: half(43);
+      color: $orange;
+      font-size: half(62);
+      position: relative;
+      line-height: 1;
+
+      &:after {
+        $size: 28;
+        content: '2';
+        position: absolute;
+        top: -50%;
+        right: 0;
+        transform: translateY(50%);
+        width: half($size);
+        height: half($size);
+        border-radius: 50%;
+        background: #fa5050;
+        color: #fff;
+        font-size: 12px !important;
+        text-align: center;
+        line-height: half($size);
+      }
+    }
+  }
+}
+
+#main {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  // 个人信息
+  .info {
+    @include flex(flex-start, center);
+    margin-bottom: r(26);
+
+    img {
+      width: half(170);
+      height: half(170);
+      // vertical-align: top;
+    }
+
+    .text {
+      width: calc(100% - 85px);
+      margin-left: half(25);
+      // margin-top: half(34);
+      padding-right: half(50);
+      position: relative;
+
+      &:after {
+        content: '\e611';
+        font-family: 'iconfont';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: half(41);
+        height: half(46);
+        font-size: half(41);
+        color: #000;
+      }
+
+      a {
+        font-size: half(30);
+        color: #000;
+      }
+
+      p {
+        font-size: half(26);
+        color: #9d9d9d;
+        margin-top: half(37);
+      }
+    }
+  }
+
+  // 功能区
+  .shop {
+
+    // 我的点评、收藏、优惠券
+    .guild {
+      @include flex(center, center);
+      margin-bottom: half(32);
+
+      .item {
+        width: half(195);
+        height: half(151);
+        text-align: center;
+
+        &:not(:last-of-type) {
+          margin-right: r(60);
+        }
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          font-size: 0;
+          padding-top: half(20);
+
+          img {
+            display: block;
+            height: half(80);
+            margin: 0 auto half(10);
+          }
+
+          span {
+            color: #000;
+            font-size: half(26);
+            // line-height: 1;
+          }
+        }
+      }
+
+      // 点评
+      .review {
+        background-color: #b2e0a0;
+
+        img {
+          width: half(79);
+        }
+      }
+
+      // 收藏
+      .collect {
+        background-color: #a0dce0;
+
+        img {
+          width: half(84);
+        }
+      }
+
+      // 优惠券
+      .coupons {
+        background-color: #e0b7a0;
+
+        img {
+          width: half(124);
+        }
+      }
+    }
+
+    //我的钱包、好友等
+    .container {
+      div {
+        @include flex(space-between, center);
+        line-height: 1;
+
+        h5 {
+          font-weight: normal;
+
+          // 多个class类型中以空格分开的单词（所有有此单词的元素）
+          // i {
+          //   // display: inline-block;
+          //   color: $orange;
+          //   vertical-align: middle;
+          // }
+          img {
+            vertical-align: middle;
+
+          }
+
+          span {
+            font-size: half(26);
+          }
+        }
+
+        // more 
+        div {
+          font-size: 0;
+
+          a {
+            span {
+              color: #000;
+              font-size: half(24);
+              margin-right: half(8);
+            }
+
+            i {
+              color: $orange;
+              font-size: half(25);
+            }
+          }
+        }
+      }
+
+      // 公用代码块
+      @mixin div-img ($w, $mr, $mb:0) {
+        margin-bottom: $mb;
+
+        h5 img {
+          width: $w;
+          margin-right: $mr;
+        }
+      }
+
+      .money {
+        @include div-img(half(57), half(38), half(23));
+      }
+
+      .comment {
+        @include div-img(half(71), half(26), half(33));
+      }
+
+      .find-friends {
+        @include div-img(half(94), half(4), half(42));
+      }
+
+      .footprint {
+        @include div-img(half(59), half(36), half(79));
+      }
+
+      .settings {
+        @include div-img(half(78), half(20), half(24));
+        height: half(79);
+      }
+
+      .contect {
+        @include div-img(half(84), half(20));
+      }
+    }
+  }
+
+  // 按钮
+  .btn-wrap {
+    @include flex(center, center);
+    margin: half(36) 0 half(40);
+
+    form {
+      font-size: 0;
+
+      input {
+        width: half(147);
+        height: half(76);
+        background: $orange;
+        border-radius: half(76);
+        color: #fff;
+        font-size: half(24);
+        cursor: pointer;
+        -webkit-appearance: none;
+      }
+
+      .signOut {
+        margin-right: half(244);
+      }
+    }
+  }
+}

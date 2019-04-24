@@ -51,11 +51,11 @@
   }
 }
 
+
 #main {
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
-  padding: half(105) half(23) half(150);
 
   // 搜索区域
   .search-area {
@@ -168,6 +168,11 @@
     // margin: r(31) 0 r(37);
     @include searchT(r(31), r(37));
 
+    // 垂直方向上的对齐方式
+    h5 i {
+      vertical-align: bottom;
+    }
+
     // hot-search-items 
     .hot-search-items {
       display: grid;
@@ -222,6 +227,7 @@
   .recommend-w {
     // title 
     @include searchT(r(47), r(48));
+    margin-bottom: half(40);
 
     .search-t {
       h5 {

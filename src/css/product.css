@@ -238,105 +238,160 @@ header .cityBar select option {
   width: 100%;
 }
 
+header .stars i {
+  color: #ff9344;
+  font-size: 26px;
+}
+
 #main {
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
 }
-#main .banner {
-  position: relative;
-  padding-bottom: 0.5rem;
+#main .product {
+  width: 100%;
 }
-#main .banner .type-name {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  text-align: center;
+#main .product img {
+  width: 100%;
+  height: 2.6rem;
 }
-#main .banner .type-name .item a {
-  display: block;
-  font-size: 0.26rem;
-  color: #000;
-}
-#main .banner .type-name .item a img {
-  display: block;
-  width: 1.49rem;
-  margin-bottom: 0.09rem;
-}
-#main .banner .controls {
-  position: absolute;
-  left: 50%;
-  bottom: 0.16rem;
-  transform: translateX(-50%);
-}
-#main .banner .controls .btn {
-  width: 0.19rem;
-  height: 0.19rem;
-  border-radius: 50%;
-  background: #ffc9a1;
-  float: left;
-}
-#main .banner .controls .btn.active {
-  background: #ff9344;
-}
-#main .banner .controls .btn:not(:last-of-type) {
-  margin-right: 0.06rem;
-}
-#main .type:not(:last-of-type) {
-  margin-bottom: 0.52rem;
-}
-#main .type .type-title {
+#main .product .price-w {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.38rem;
+  padding: 18px 11px 0;
+  margin-bottom: 25.5px;
 }
-#main .type .type-title .title img {
-  width: 0.52rem;
-  height: 0.42rem;
-  margin-right: 0.09rem;
-}
-#main .type .type-title .title span {
-  font-size: 0.3rem;
-}
-#main .type .type-title .more a {
-  display: block;
-  font-size: 0;
-  color: #000;
-}
-#main .type .type-title .more a span {
-  font-size: 0.24rem;
-}
-#main .type .type-title .more a i {
-  width: 0.25rem;
-  height: 0.25rem;
-  font-size: 0.25rem;
+#main .product .price-w strong {
   color: #ff9344;
-  margin-left: 0.08rem;
+  font-size: 36px;
 }
-#main .type .items {
+#main .product .price-w strong span {
+  margin-left: 4px;
+}
+#main .product .price-w .buy {
+  background: #ff9344;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  padding: 7.5px 13px;
+}
+#main .product .praise {
+  font-size: 0;
+  padding: 0 11px;
+  margin-bottom: 18px;
+}
+#main .product .praise .left {
+  font-size: 15px;
+  line-height: 18px;
+  height: 18px;
+}
+#main .product .praise .left i {
+  color: #ff9344;
+  font-size: 19px;
+  margin-right: 6.5px;
+}
+#main .product .praise .left strong {
+  font-size: 15px;
+  color: #ff9344;
+}
+#main .product .praise .right {
+  line-height: 18px;
+  height: 18px;
+}
+#main .product .praise .right a {
+  font-size: 13px;
+  color: #8e8e8e;
+}
+#main .product .praise .right a i {
+  font-size: 13px;
+  vertical-align: middle;
+}
+#main .merchant-w {
+  padding: 0 11px;
+  margin-bottom: 10px;
+}
+#main .merchant-w .title {
+  color: #fff;
+  background: #ff9344;
+  font-weight: normal;
+  padding: 9.5px 4.5px 8.5px 5.5px;
+  position: relative;
+}
+#main .merchant-w .title:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  font-size: 23.5px;
+  font-family: iconfont;
+}
+#main .merchant-w .store-lis .store-item {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0.1rem;
 }
-#main .type .items li a {
-  display: block;
+#main .merchant-w .store-lis .store-item img {
+  width: 88.5px;
+  height: 88.5px;
 }
-#main .type .items li a img {
-  width: 1.33rem;
+#main .merchant-w .store-lis .store-item .right {
+  width: calc(100% - 88px);
+  font-size: 0;
+  padding-left: 11.5px;
+  padding-top: 6.5px;
+  padding-right: 60px;
+  position: relative;
 }
-#main .type#motion .type-title .title img {
-  width: 0.48rem;
-  height: 0.58rem;
-  margin-right: 0.15rem;
-  vertical-align: bottom;
+#main .merchant-w .store-lis .store-item .right .store-item-t {
+  font-size: 15px;
+  margin-bottom: 4.5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-#main .type#movie {
-  margin-bottom: 20px;
+#main .merchant-w .store-lis .store-item .right .stars {
+  font-size: 0;
 }
-#main .type#movie .type-title .title img {
-  width: 0.53rem;
-  margin-right: 0.19rem;
+#main .merchant-w .store-lis .store-item .right .stars i {
+  color: #ff9344;
+  font-size: 0.36rem;
+}
+#main .merchant-w .store-lis .store-item .right .stars i:not(:last-of-type) {
+  margin-right: 0.02rem;
+}
+#main .merchant-w .store-lis .store-item .right .stars strong {
+  font-size: 13px;
+  color: #929292;
+  margin-left: 5px;
+}
+#main .merchant-w .store-lis .store-item .right .distance {
+  color: #929292;
+  font-size: 12px;
+  margin-bottom: 4px;
+  margin-top: 2.5px;
+}
+#main .merchant-w .store-lis .store-item .right a.detail {
+  color: #ff9344;
+  font-size: 10px;
+}
+#main .merchant-w .store-lis .store-item .right input[type=button] {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 55.5px;
+  height: 29.5px;
+  background: #ff9344;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  line-height: 29.5px;
+  font-size: 15px;
+  outline: none;
+  -webkit-appearance: none;
 }
 
-/*# sourceMappingURL=category.css.map */
+/*# sourceMappingURL=product.css.map */

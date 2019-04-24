@@ -1,7 +1,7 @@
 @charset 'utf-8';
 // 初始化样式文件
 @import './common/_reset.scss';
-// 公共代码块 
+// 公共代码块  
 @import './common/_mixin.scss';
 // 公共样式（头部、底部） 
 @import './common/_header.scss';
@@ -9,12 +9,11 @@
 
 // content 
 #main {
-  height: 100%;
-  overflow-y: scroll;
+  height: 100%; 
+  overflow-y: scroll; 
   overflow-x: hidden;
-  padding: half(105) half(23) half(135);
 
-  // banner 
+  // banner  
   .banner {
     position: relative;
     padding-bottom: r(50);
@@ -142,12 +141,13 @@
             vertical-align: bottom;
             // margin-top: -10px;
           }
-        }
+        } 
       }
     }
 
     // type-03
-    &#motion {
+    &#movie {
+      margin-bottom: half(40);
       .type-title {
         .title {
           img {
