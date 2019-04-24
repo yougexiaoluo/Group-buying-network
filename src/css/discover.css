@@ -1,0 +1,469 @@
+@charset "UTF-8";
+body,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+input,
+select,
+textarea,
+button,
+th,
+td,
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+dl,
+ol {
+  list-style: none;
+}
+
+img,
+fieldset,
+input[type=submit] {
+  border: 0 none;
+}
+
+em {
+  font-style: normal;
+}
+
+strong {
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+input[type=button] {
+  cursor: pointer;
+  border: 0 none;
+}
+
+/* 去掉移动端点击有背景色 */
+label {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+a,
+button,
+input,
+img {
+  -webkit-touch-callout: none;
+}
+
+img {
+  /*禁止图片的点击事件，例如长按保存图片*/
+  vertical-align: top;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+  line-height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+html,
+body {
+  /*禁止用户选择元素*/
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  /*禁止元素点击出现半透明黑色背景*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* 针对移动端 */
+html {
+  height: 100%;
+  width: 100%;
+  font-family: "Heiti SC", "Microsoft YaHei", "sans-serif";
+  outline: 0;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  font-size: 16px;
+}
+
+/*
+  单位换算
+    rem 实质上是算比例，设计图尺寸 / 1 比 1设计图时的跟字体大小   
+*/
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 67.5px;
+  background: #fff;
+  box-sizing: border-box;
+}
+footer .footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 6px 25px;
+}
+footer .footer-nav li {
+  width: calc(100% / 4);
+  text-align: center;
+  font-size: 0;
+}
+footer .footer-nav li a {
+  color: #000;
+  font-size: 0;
+}
+footer .footer-nav li a i {
+  display: block;
+  color: #ff9344;
+  font-size: 35px;
+  margin-bottom: 4px;
+}
+footer .footer-nav li a span {
+  font-size: 12px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 52.5px;
+  background: #fff;
+  padding: 24px 11.5px 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+header .back-btn {
+  width: 61.5px;
+  height: 28.5px;
+  border: 1px solid #ff9344;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 28.5px;
+}
+header .category-title {
+  flex: 2;
+  height: 100%;
+  font-size: 13px;
+  font-weight: normal;
+  text-align: center;
+}
+header .cityBar {
+  width: 79.5px;
+  height: 28px;
+  border: 1px solid #ff9344;
+  border-radius: 2px;
+  position: relative;
+}
+header .cityBar select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-image: url(../assets/images/home/jiantou.png);
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-size: 15px 7.5px;
+  padding-left: 7.5px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+header .cityBar select option {
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 52.5px 11.5px 75px;
+}
+#main .search-area .searchBar {
+  width: 2.66rem;
+  height: 28px;
+  margin: 0.18rem auto 0.33rem;
+  border: 1px solid #ff9344;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#main .search-area .searchBar form {
+  font-size: 0;
+  height: 100%;
+}
+#main .search-area .searchBar form input[type=text] {
+  width: calc(100% - 22px);
+  height: 100%;
+  border: 0 none;
+  padding-left: 10px;
+  padding-right: 2px;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #333;
+}
+#main .search-area .searchBar form button[type=submit] {
+  background-color: transparent;
+  outline: none;
+  vertical-align: middle;
+}
+#main .search-area .searchBar form button[type=submit] i {
+  width: 18.5px;
+  height: 17.5px;
+  color: #ff9344;
+}
+#main .search-area .search-content .search-content-t {
+  text-align: center;
+  font-size: 0.26rem;
+  font-weight: normal;
+  color: #000;
+  margin-bottom: 0.14rem;
+}
+#main .search-area .search-content .search-content-lis {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 5.12rem;
+  margin: 0 auto;
+}
+#main .search-area .search-content .search-content-lis .search-item {
+  width: 1.25rem;
+  height: 0.64rem;
+  background: #dcdcdc;
+  line-height: 0.64rem;
+}
+#main .search-area .search-content .search-content-lis .search-item:nth-child(1) {
+  margin-bottom: 0.03rem;
+  margin-right: 0.04rem;
+}
+#main .search-area .search-content .search-content-lis .search-item:nth-child(2) {
+  margin-bottom: 0.03rem;
+  margin-right: 0.04rem;
+}
+#main .search-area .search-content .search-content-lis .search-item:nth-child(3) {
+  margin-bottom: 0.03rem;
+  margin-right: 0.04rem;
+}
+#main .search-area .search-content .search-content-lis .search-item:nth-child(4) {
+  margin-bottom: 0.03rem;
+  margin-right: 0.04rem;
+}
+#main .search-area .search-content .search-content-lis .search-item:nth-child(4) {
+  margin-right: 0;
+}
+#main .search-area .search-content .search-content-lis .search-item:nth-child(5) {
+  margin-bottom: 0.03rem;
+  margin-right: 0.04rem;
+}
+#main .search-area .search-content .search-content-lis .search-item:nth-of-type(5) {
+  margin-bottom: 0;
+}
+#main .search-area .search-content .search-content-lis .search-item:nth-child(6) {
+  margin-bottom: 0.03rem;
+  margin-right: 0.04rem;
+}
+#main .search-area .search-content .search-content-lis .search-item:nth-of-type(6) {
+  margin-bottom: 0;
+}
+#main .search-area .search-content .search-content-lis .search-item:nth-child(7) {
+  margin-bottom: 0.03rem;
+  margin-right: 0.04rem;
+}
+#main .search-area .search-content .search-content-lis .search-item:nth-of-type(7) {
+  margin-bottom: 0;
+}
+#main .search-area .search-content .search-content-lis .search-item:nth-child(8) {
+  margin-bottom: 0.03rem;
+  margin-right: 0.04rem;
+}
+#main .search-area .search-content .search-content-lis .search-item:nth-of-type(8) {
+  margin-bottom: 0;
+}
+#main .search-area .search-content .search-content-lis .search-item:nth-child(8) {
+  margin-right: 0;
+}
+#main .search-area .search-content .search-content-lis .search-item a {
+  display: block;
+  height: 100%;
+  color: #898989;
+  font-size: 0.2rem;
+  text-align: center;
+}
+#main .hot-search-w .search-t {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.31rem 0 0.37rem;
+  padding-left: 0.16rem;
+}
+#main .hot-search-w .search-t h5 {
+  font-size: 0;
+  font-weight: normal;
+}
+#main .hot-search-w .search-t h5 i {
+  display: inline-block;
+  width: 0.32rem;
+  height: 0.47rem;
+  font-size: 0.47rem;
+  color: #ff9344;
+  margin-right: 0.24rem;
+}
+#main .hot-search-w .search-t h5 span {
+  font-size: 0.3rem;
+}
+#main .hot-search-w .search-t .more-w a span {
+  color: #000;
+  font-size: 0.24rem;
+}
+#main .hot-search-w .search-t .more-w a i {
+  color: #ff9344;
+  font-size: 12.5px;
+}
+#main .hot-search-w .hot-search-items {
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-template-columns: 2.8rem 1.95rem 2.11rem;
+  grid-template-rows: 1.47rem 1.875rem;
+  gap: 0.09rem 0.08rem;
+}
+#main .hot-search-w .hot-search-items a {
+  display: block;
+  width: 100%;
+}
+#main .hot-search-w .hot-search-items a img {
+  width: 100%;
+  height: 100%;
+}
+#main .hot-search-w .hot-search-items .item-01 {
+  width: 2.8rem;
+  height: 3.52rem;
+  grid-row-start: span 2;
+}
+#main .hot-search-w .hot-search-items .item-02 {
+  width: 4.2rem;
+  height: 1.47rem;
+  grid-column-start: span 2;
+}
+#main .hot-search-w .hot-search-items .item-03 {
+  width: 1.95rem;
+  height: 1.97rem;
+}
+#main .hot-search-w .hot-search-items .item-04 {
+  width: 2.15rem;
+  height: 1.97rem;
+}
+#main .recommend-w .search-t {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.47rem 0 0.48rem;
+  padding-left: 0.16rem;
+}
+#main .recommend-w .search-t h5 {
+  font-size: 0;
+  font-weight: normal;
+}
+#main .recommend-w .search-t h5 i {
+  display: inline-block;
+  width: 0.32rem;
+  height: 0.47rem;
+  font-size: 0.47rem;
+  color: #ff9344;
+  margin-right: 0.24rem;
+}
+#main .recommend-w .search-t h5 span {
+  font-size: 0.3rem;
+}
+#main .recommend-w .search-t .more-w a span {
+  color: #000;
+  font-size: 0.24rem;
+}
+#main .recommend-w .search-t .more-w a i {
+  color: #ff9344;
+  font-size: 12.5px;
+}
+#main .recommend-w .search-t h5 i {
+  width: 0.41rem;
+  height: 0.4rem;
+  font-size: 0.4rem;
+  margin-right: 0.17rem;
+}
+#main .recommend-w .recommend-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#main .recommend-w .recommend-items a {
+  display: block;
+  height: 2rem;
+}
+#main .recommend-w .recommend-items a img {
+  width: 100%;
+  height: 100%;
+}
+#main .recommend-w .recommend-items .item-01 a {
+  width: 2.28rem;
+}
+#main .recommend-w .recommend-items .item-02 a {
+  width: 2.11rem;
+}
+#main .recommend-w .recommend-items .item-03 {
+  width: 2.2rem;
+}
+
+/*# sourceMappingURL=discover.css.map */

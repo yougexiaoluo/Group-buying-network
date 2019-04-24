@@ -1,0 +1,272 @@
+@charset 'utf-8';
+// 初始化样式文件
+@import './common/_reset.scss';
+// 公共代码块
+@import './common/_mixin.scss';
+// 公共样式（头部、底部） 
+@import './common/_header.scss';
+
+// 标题代码块
+@mixin searchT ($mt:0, $mb:0) {
+
+  // title 
+  .search-t {
+    @include flex(space-between, center);
+    margin: $mt 0 $mb;
+    padding-left: r(16);
+
+    h5 {
+      font-size: 0;
+      font-weight: normal;
+
+      // 多个class类型中以空格分开的单词（所有有此单词的元素）
+      i {
+        display: inline-block;
+        width: r(32);
+        height: r(47);
+        font-size: r(47);
+        color: $orange;
+        margin-right: r(24);
+      }
+
+      span {
+        font-size: r(30);
+      }
+    }
+
+    // more 
+    .more-w {
+      a {
+        span {
+          color: #000;
+          font-size: r(24);
+        }
+
+        i {
+          color: $orange;
+          font-size: half(25);
+        }
+      }
+    }
+  }
+}
+
+#main {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: half(105) half(23) half(150);
+
+  // 搜索区域
+  .search-area {
+
+    // searchBar 
+    .searchBar {
+      width: r(266);
+      height: half(56);
+      margin: r(18) auto r(33);
+      border: 1px solid $orange;
+      border-radius: 20px;
+      overflow: hidden;
+
+      form {
+        font-size: 0;
+        height: 100%;
+
+        input[type=text] {
+          width: calc(100% - 22px);
+          height: 100%;
+          border: 0 none;
+          // text-indent: 2em;
+          padding-left: 10px;
+          padding-right: 2px;
+          vertical-align: middle;
+          // 此处修改过字体大小
+          font-size: half(24);
+          color: #333;
+        }
+
+        button[type=submit] {
+          background-color: transparent;
+          outline: none;
+          vertical-align: middle;
+
+          i {
+            width: half(37);
+            height: half(35);
+            color: $orange;
+          }
+        }
+      }
+    }
+
+    // hot-search 
+    .search-content {
+
+      // title
+      .search-content-t {
+        text-align: center;
+        font-size: r(26);
+        font-weight: normal;
+        color: #000;
+        margin-bottom: r(14);
+      }
+
+      // search-content-lis
+      .search-content-lis {
+        @include flex(space-between, center);
+        flex-wrap: wrap;
+        width: r(512);
+        margin: 0 auto;
+
+        // search-item
+        .search-item {
+          width: r(125);
+          height: r(64);
+          // text-align: center;
+          background: #dcdcdc;
+
+          line-height: r(64);
+
+          @for $i from 1 to 9 {
+            &:nth-child(#{$i}) {
+              margin-bottom: r(3);
+              margin-right: r(4);
+            }
+
+            // 暂且这样写，若后期要添加，可能就不对了
+            @if $i>4 {
+              &:nth-of-type(#{$i}) {
+                margin-bottom: 0;
+              }
+            }
+
+            // 去掉第 4n 个元素的有外边距
+            @if $i % 4==0 {
+              &:nth-child(#{$i}) {
+                margin-right: 0;
+              }
+            }
+          }
+
+          a {
+            display: block;
+            height: 100%;
+            color: #898989;
+            font-size: r(20);
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  // 热门搜索
+  .hot-search-w {
+
+    // title 
+    // margin: r(31) 0 r(37);
+    @include searchT(r(31), r(37));
+
+    // hot-search-items 
+    .hot-search-items {
+      display: grid;
+      grid-auto-flow: row dense;
+      grid-template-columns: r(280) r(195) r(211);
+      grid-template-rows: r(147) r(187.5);
+      // grid-column-gap: r(8);
+      // grid-row-gap: r(9);
+      gap: r(9) r(8);
+
+      // li
+      .hot-search-item {
+        // float: left;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+
+        // img 
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .item-01 {
+        width: r(280);
+        height: r(352);
+        grid-row-start: span 2;
+      }
+
+      .item-02 {
+        width: r(420);
+        height: r(147);
+        grid-column-start: span 2;
+      }
+
+      .item-03 {
+        width: r(195);
+        height: r(197);
+      }
+
+      .item-04 {
+        width: r(215);
+        height: r(197);
+      }
+    }
+  }
+
+  // 推荐搜索
+  .recommend-w {
+    // title 
+    @include searchT(r(47), r(48));
+
+    .search-t {
+      h5 {
+        i {
+          width: r(41);
+          height: r(40);
+          font-size: r(40);
+          margin-right: r(17);
+        }
+      }
+    }
+
+    // 推荐搜索
+    .recommend-items {
+      @include flex(space-between);
+
+      .item {}
+
+      a {
+        display: block;
+        height: r(200);
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .item-01 {
+        a {
+          width: r(228);
+        }
+      }
+
+      .item-02 {
+        a {
+          width: r(211);
+
+        }
+      }
+
+      .item-03 {
+        width: r(220);
+      }
+    }
+  }
+
+}

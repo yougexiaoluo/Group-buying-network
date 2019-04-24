@@ -1,10 +1,10 @@
 @charset 'utf-8';
 // 初始化样式文件
 @import './common/_reset.scss';
-// 公共代码块
-@import './common/mixin.scss';
+// 公共代码块 
+@import './common/_mixin.scss';
 // 公共样式（头部、底部） 
-@import './common/header.scss';
+@import './common/_header.scss';
 
 
 // content 
@@ -12,6 +12,7 @@
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+  padding: half(105) half(23) half(135);
 
   // banner 
   .banner {
@@ -157,6 +158,7 @@
         }
       }
     }
+
     // .....
   }
 }
