@@ -35,11 +35,11 @@ header {
     border-radius: half(20);
     text-align: center;
     line-height: half(57);
-    // flex: 1;
+    // flex: 1; 
   }
 
-  // title
-  .category-title {
+  // title 
+  h2.title {
     flex: 2;
     height: 100%;
     height: half(57);
@@ -67,6 +67,7 @@ header {
       // background-position: calc(100% - 5px) center;
       background-position: right 5px center;
       background-size: 15px 7.5px;
+      background-color: #fff;
       padding-left: half(15);
       // 重置浏览器默认下拉框的小三角
       -webkit-appearance: none;
@@ -74,6 +75,7 @@ header {
 
       option {
         width: 100%;
+        background: #fff;
       }
     }
 

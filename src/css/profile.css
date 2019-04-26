@@ -156,7 +156,7 @@ footer .footer-nav {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  padding: 6px 25px;
+  padding-top: 6px;
 }
 footer .footer-nav li {
   width: calc(100% / 4);
@@ -164,6 +164,9 @@ footer .footer-nav li {
   font-size: 0;
 }
 footer .footer-nav li a {
+  display: block;
+  width: 100%;
+  height: 100%;
   color: #000;
   font-size: 0;
 }
@@ -206,7 +209,7 @@ header .back-btn {
   text-align: center;
   line-height: 28.5px;
 }
-header .category-title {
+header h2.title {
   flex: 2;
   height: 100%;
   height: 28.5px;
@@ -230,12 +233,14 @@ header .cityBar select {
   background-repeat: no-repeat;
   background-position: right 5px center;
   background-size: 15px 7.5px;
+  background-color: #fff;
   padding-left: 7.5px;
   -webkit-appearance: none;
   appearance: none;
 }
 header .cityBar select option {
   width: 100%;
+  background: #fff;
 }
 
 header .tidings {
@@ -315,8 +320,8 @@ header .tidings i:after {
   margin-bottom: 16px;
 }
 #main .shop .guild .item {
-  width: 97.5px;
-  height: 75.5px;
+  width: 1.95rem;
+  height: 1.51rem;
   text-align: center;
 }
 #main .shop .guild .item:not(:last-of-type) {
@@ -327,34 +332,37 @@ header .tidings i:after {
   width: 100%;
   height: 100%;
   font-size: 0;
-  padding-top: 10px;
+  padding-top: 0.14rem;
 }
 #main .shop .guild .item a img {
   display: block;
-  height: 40px;
-  margin: 0 auto 5px;
+  width: 0.8rem;
+  margin: 0 auto 0.1rem;
+}
+#main .shop .guild .item a img.coupons {
+  width: 1.24rem;
 }
 #main .shop .guild .item a span {
   color: #000;
-  font-size: 13px;
+  font-size: 0.26rem;
 }
 #main .shop .guild .review {
   background-color: #b2e0a0;
 }
 #main .shop .guild .review img {
-  width: 39.5px;
+  width: 0.79rem;
 }
 #main .shop .guild .collect {
   background-color: #a0dce0;
 }
 #main .shop .guild .collect img {
-  width: 42px;
+  width: 0.84rem;
 }
 #main .shop .guild .coupons {
   background-color: #e0b7a0;
 }
 #main .shop .guild .coupons img {
-  width: 62px;
+  width: 1.24rem;
 }
 #main .shop .container div {
   display: flex;
@@ -369,68 +377,68 @@ header .tidings i:after {
   vertical-align: middle;
 }
 #main .shop .container div h5 span {
-  font-size: 13px;
+  font-size: 0.26rem;
 }
 #main .shop .container div div {
   font-size: 0;
 }
 #main .shop .container div div a span {
   color: #000;
-  font-size: 12px;
-  margin-right: 4px;
+  font-size: 0.24rem;
+  margin-right: 0.08rem;
 }
 #main .shop .container div div a i {
   color: #ff9344;
-  font-size: 12.5px;
+  font-size: 0.25rem;
 }
 #main .shop .container .money {
-  margin-bottom: 11.5px;
+  margin-bottom: 0.23rem;
 }
 #main .shop .container .money h5 img {
-  width: 28.5px;
-  margin-right: 19px;
+  width: 0.57rem;
+  margin-right: 0.38rem;
 }
 #main .shop .container .comment {
-  margin-bottom: 16.5px;
+  margin-bottom: 0.33rem;
 }
 #main .shop .container .comment h5 img {
-  width: 35.5px;
-  margin-right: 13px;
+  width: 0.71rem;
+  margin-right: 0.26rem;
 }
 #main .shop .container .find-friends {
-  margin-bottom: 21px;
+  margin-bottom: 0.42rem;
 }
 #main .shop .container .find-friends h5 img {
-  width: 47px;
-  margin-right: 2px;
+  width: 0.94rem;
+  margin-right: 0.04rem;
 }
 #main .shop .container .footprint {
-  margin-bottom: 39.5px;
+  margin-bottom: 0.79rem;
 }
 #main .shop .container .footprint h5 img {
-  width: 29.5px;
-  margin-right: 18px;
+  width: 0.59rem;
+  margin-right: 0.36rem;
 }
 #main .shop .container .settings {
-  margin-bottom: 12px;
-  height: 39.5px;
+  margin-bottom: 0.24rem;
+  height: 0.79rem;
 }
 #main .shop .container .settings h5 img {
-  width: 39px;
-  margin-right: 10px;
+  width: 0.78rem;
+  margin-right: 0.2rem;
 }
 #main .shop .container .contect {
   margin-bottom: 0;
 }
 #main .shop .container .contect h5 img {
-  width: 42px;
-  margin-right: 10px;
+  width: 0.84rem;
+  margin-right: 0.2rem;
 }
 #main .btn-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 18px 0 20px;
+  margin: 0.36rem 0 0.4rem;
 }
 #main .btn-wrap form {
   font-size: 0;

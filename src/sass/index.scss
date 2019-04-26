@@ -72,7 +72,7 @@ header {
   }
 
   // searchBar 
-  .searchBar { 
+  .searchBar {
     width: r(264);
     height: half(50);
     border: 1px solid $orange;
@@ -95,6 +95,9 @@ header {
         vertical-align: middle;
         font-size: 12px;
         color: #333;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
 
       // 图片的方式 
@@ -137,11 +140,15 @@ header {
       // background-position: calc(100% - 5px) center;
       background-position: right 5px center;
       background-size: 15px 7.5px;
+      background-color: #fff;
       border: 0 none;
       padding-left: half(15);
 
       option {
         width: 100%;
+        // -webkit-appearance: none;
+        // appearance: none;
+        background: #fff;
       }
     }
   }
@@ -237,6 +244,17 @@ header {
             a {
               font-size: r(30);
               color: #000;
+              // 点击时的效果
+              &:active {
+                color: $orange;
+              }
+              // 访问过后的效果
+              &:visited {
+                color: $orange;
+              }
+            }
+            span {
+              line-height: 2;
             }
           }
 

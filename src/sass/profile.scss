@@ -100,8 +100,8 @@ header {
       margin-bottom: half(32);
 
       .item {
-        width: half(195);
-        height: half(151);
+        width: r(195);
+        height: r(151);
         text-align: center;
 
         &:not(:last-of-type) {
@@ -113,17 +113,21 @@ header {
           width: 100%;
           height: 100%;
           font-size: 0;
-          padding-top: half(20);
+          padding-top: r(14);
 
           img {
             display: block;
-            height: half(80);
-            margin: 0 auto half(10);
+            width: r(80);
+            margin: 0 auto r(10);
+
+            &.coupons {
+              width: r(124);
+            }
           }
 
           span {
             color: #000;
-            font-size: half(26);
+            font-size: r(26);
             // line-height: 1;
           }
         }
@@ -134,7 +138,8 @@ header {
         background-color: #b2e0a0;
 
         img {
-          width: half(79);
+          width: r(79);
+
         }
       }
 
@@ -143,7 +148,7 @@ header {
         background-color: #a0dce0;
 
         img {
-          width: half(84);
+          width: r(84);
         }
       }
 
@@ -152,7 +157,7 @@ header {
         background-color: #e0b7a0;
 
         img {
-          width: half(124);
+          width: r(124);
         }
       }
     }
@@ -178,7 +183,7 @@ header {
           }
 
           span {
-            font-size: half(26);
+            font-size: r(26); 
           }
         }
 
@@ -189,13 +194,13 @@ header {
           a {
             span {
               color: #000;
-              font-size: half(24);
-              margin-right: half(8);
+              font-size: r(24);
+              margin-right: r(8);
             }
 
             i {
               color: $orange;
-              font-size: half(25);
+              font-size: r(25);
             }
           }
         }
@@ -212,28 +217,28 @@ header {
       }
 
       .money {
-        @include div-img(half(57), half(38), half(23));
+        @include div-img(r(57), r(38), r(23));
       }
 
       .comment {
-        @include div-img(half(71), half(26), half(33));
+        @include div-img(r(71), r(26), r(33));
       }
 
       .find-friends {
-        @include div-img(half(94), half(4), half(42));
+        @include div-img(r(94), r(4), r(42));
       }
 
       .footprint {
-        @include div-img(half(59), half(36), half(79));
+        @include div-img(r(59), r(36), r(79));
       }
 
       .settings {
-        @include div-img(half(78), half(20), half(24));
-        height: half(79);
+        @include div-img(r(78), r(20), r(24));
+        height: r(79);
       }
 
       .contect {
-        @include div-img(half(84), half(20));
+        @include div-img(r(84), r(20));
       }
     }
   }
@@ -241,7 +246,7 @@ header {
   // 按钮
   .btn-wrap {
     @include flex(center, center);
-    margin: half(36) 0 half(40);
+    margin: r(36) 0 r(40);
 
     form {
       font-size: 0;

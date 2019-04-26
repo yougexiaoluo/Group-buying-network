@@ -20,3 +20,38 @@ function initRecalc() {
   document.addEventListener('DOMContentLoaded', recalc, false);
 }
 initRecalc();
+
+
+
+// 点击底部导航获取文本传递到对应的页面
+var lis = Array.from(document.querySelectorAll('.footer-nav li'));
+var footerNav = document.querySelector('.footer-nav');
+var obj = {}
+var strObj = '';
+var getText = function (event) {
+  // 有兼容性
+  var ev = event || window.event;
+  // ie 不支持 event.target
+  var target = ev.target || ev.srcElement;
+  // 当前页面路径
+  var currentPage = location.pathname;
+
+  while (target !== footerNav) {
+    if (target.tagName.toLowerCase() == 'li') {
+      var targetText = target.innerText;
+      // console.log(targetText);
+      obj.title = target.innerText;
+      // 将对象转换成json格式
+      strObj = JSON.stringify(obj);
+      // console.log(strObj);
+      // 将数据通过localStorage的方式传数据
+      localStorage.setItem('title', strObj);
+      break;
+    }
+    // 重新指向父节点
+    target = target.parentNode;
+  }
+}
+
+// 使用时间代理的方式 -- 绑定事件
+footerNav.addEventListener('touchend', getText, false);

@@ -12,7 +12,7 @@
   // title 
   .search-t {
     @include flex(space-between, center);
-    margin: $mt 0 $mb;
+    margin: $mt 0 $mb; 
     padding-left: r(16);
 
     h5 {
@@ -44,7 +44,7 @@
 
         i {
           color: $orange;
-          font-size: half(25);
+          font-size: r(25);
         }
       }
     }
@@ -82,8 +82,11 @@
           padding-right: 2px;
           vertical-align: middle;
           // 此处修改过字体大小
-          font-size: half(24);
+          font-size: half(24); 
           color: #333;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
 
         button[type=submit] {

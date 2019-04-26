@@ -156,7 +156,7 @@ footer .footer-nav {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  padding: 6px 25px;
+  padding-top: 6px;
 }
 footer .footer-nav li {
   width: calc(100% / 4);
@@ -164,6 +164,9 @@ footer .footer-nav li {
   font-size: 0;
 }
 footer .footer-nav li a {
+  display: block;
+  width: 100%;
+  height: 100%;
   color: #000;
   font-size: 0;
 }
@@ -223,6 +226,9 @@ header .searchBar form input[type=text] {
   vertical-align: middle;
   font-size: 12px;
   color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 header .searchBar form button {
   background-color: transparent;
@@ -250,11 +256,13 @@ header .cityBar select {
   background-repeat: no-repeat;
   background-position: right 5px center;
   background-size: 15px 7.5px;
+  background-color: #fff;
   border: 0 none;
   padding-left: 7.5px;
 }
 header .cityBar select option {
   width: 100%;
+  background: #fff;
 }
 
 #main {
@@ -382,6 +390,15 @@ header .cityBar select option {
 #main .like .product .product-item .item-right .product-name a {
   font-size: 0.3rem;
   color: #000;
+}
+#main .like .product .product-item .item-right .product-name a:active {
+  color: #ff9344;
+}
+#main .like .product .product-item .item-right .product-name a:visited {
+  color: #ff9344;
+}
+#main .like .product .product-item .item-right .product-name span {
+  line-height: 2;
 }
 #main .like .product .product-item .item-right .meal {
   margin-top: 0.18rem;

@@ -22,8 +22,8 @@
       Back
     </div>
     <!-- searchBar -->
-    <h2 class="category-title">
-      分类
+    <h2 class="title">
+
     </h2>
     <!-- city -->
     <div class="cityBar fr">
@@ -43,7 +43,7 @@
           <a href="#foods">
             <img src="../assets/images/category/foods.png" alt="">
             <span>美食</span>
-          </a> 
+          </a>
         </li>
         <li class="item item-02">
           <a href="#movie">
@@ -219,6 +219,14 @@
 </body>
 <script src="../js/common.js"></script>
 <script src="../js/go-history.js"></script>
+
+<!-- <script>
+  // 获取其它页面传递过来的数据
+  var t = document.querySelector('.category-title');
+  var strObj = JSON.parse(localStorage.getItem('title'));
+  t.innerText = strObj.title;
+  console.log(strObj);
+</script> -->
 <!-- <iframe src="../js/go-history.js" frameborder="0" style="display: none; height: 0; width: 0;"></iframe> -->
 
 </html>

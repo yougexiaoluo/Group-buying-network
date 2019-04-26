@@ -12,6 +12,9 @@
   <link rel='shortcut icon' href='./favicon.ico' type='image/x-icon'>
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1155880_qrruiot5tf.css">
   <link rel='stylesheet' href='./src/css/index.css'>
+  <iframe src="./node_modules/art-template/lib/template-web.js" style="display: none; width: 0; height: 0;"></iframe>
+  <script src="./src/js/common.js" async></script>
+  <script src="./src/js/index.js" async></script>
 </head>
 
 <body>
@@ -85,82 +88,26 @@
         </div>
       </div>
       <ul class="clearfix product">
-        <li class="product-item item-01">
+        <!-- <li class="product-item item-01">
           <img src="./src/assets/images/home/food.jpg" alt="">
           <div class="item-right">
-            <!-- 商品名称 -->
+            商品名称
             <div class="product-name clearfix">
               <a class="fl" href="./src/pages/product.html">万岁寿司（正佳店）</a>
               <span class="fr">&lt;100m</span>
             </div>
-            <!-- 套餐 -->
+            套餐
             <div class="meal">
               <span>[100店通用]</span><span>双人套餐</span>
             </div>
-            <!-- 价格 -->
+            价格
             <div class="price-wrap clearfix">
               <span class="price fl">&yen; 88.00</span>
               <span class="volume fr">已售1000</span>
             </div>
           </div>
-        </li>
-        <li class="product-item item-02">
-          <img src="./src/assets/images/home/food2.jpg" alt="">
-          <div class="item-right">
-            <!-- 商品名称 -->
-            <div class="product-name clearfix">
-              <a class="fl" href="./src/pages/product.html">周黑鸭（正佳店）</a>
-              <span class="fr">&lt;100m</span>
-            </div>
-            <!-- 套餐 -->
-            <div class="meal">
-              <span>[100店通用]</span><span>双人套餐</span>
-            </div>
-            <!-- 价格 -->
-            <div class="price-wrap clearfix">
-              <span class="price fl">&yen; 88.00</span>
-              <span class="volume fr">已售1000</span>
-            </div>
-          </div>
-        </li>
-        <li class="product-item item-03">
-          <img src="./src/assets/images/home/food.jpg" alt="">
-          <div class="item-right">
-            <!-- 商品名称 -->
-            <div class="product-name clearfix">
-              <a class="fl" href="./src/pages/product.html">万岁寿司（正佳店）</a>
-              <span class="fr">&lt;100m</span>
-            </div>
-            <!-- 套餐 -->
-            <div class="meal">
-              <span>[100店通用]</span><span>双人套餐</span>
-            </div>
-            <!-- 价格 -->
-            <div class="price-wrap clearfix">
-              <span class="price fl">&yen; 88.00</span>
-              <span class="volume fr">已售1000</span>
-            </div>
-          </div>
-        </li>
-        <li class="product-item item-04">
-          <img src="./src/assets/images/home/food2.jpg" alt="">
-          <div class="item-right">
-            <!-- 商品名称 -->
-            <div class="product-name clearfix">
-              <a class="fl" href="./src/pages/product.html">周黑鸭（正佳店）</a>
-              <span class="fr">&lt;100m</span>
-            </div>
-            <!-- 套餐 -->
-            <div class="meal">
-              <span>[100店通用]</span><span>双人套餐</span>
-            </div>
-            <!-- 价格 -->
-            <div class="price-wrap clearfix">
-              <span class="price fl">&yen; 88.00</span>
-              <span class="volume fr">已售1000</span>
-            </div>
-          </div>
-        </li>
+        </li> -->
+
       </ul>
     </div>
   </div>
@@ -175,18 +122,21 @@
       </li>
       <li>
         <a href="./src/pages/category.html">
+          <!-- <a href="./src/pages/category.html"> -->
           <i class="iconfont icon-fenlei"></i>
           <span>分类</span>
         </a>
       </li>
       <li>
         <a href="./src/pages/discover.html">
+          <!-- <a href="./src/pages/discover.html"> -->
           <i class="iconfont icon-icon-test"></i>
           <span>发现</span>
         </a>
       </li>
       <li>
-        <a href="./src/pages/category.html">
+        <a href="./src/pages/profile.html">
+          <!-- <a href="./src/pages/category.html"> -->
           <i class="iconfont icon-me"></i>
           <span>我的</span>
         </a>
@@ -194,6 +144,32 @@
     </ul>
   </footer>
 </body>
-<script src="./src/js/common.js"></script>
+<!-- <script src="./src/js/common.js"></script> -->
+<script src="./src/js/index.js"></script>
+<script src="./src/js/template.js"></script>
+<script type="text/html" id="template-live">
+  {{each live as item i}}
+  <li class="product-item item-01" data-target="{{item.id}}">
+    <img src="{{item.imgUrl}}" alt="">
+    <div class="item-right">
+      <div class="product-name clearfix">
+        <a class="fl" href="./src/pages/product.html">{{item.title}}</a>
+        <span class="fr">{{item.distance}}</span>
+      </div>
+      <div class="meal">
+        <span>{{item.setMeal}}</span>
+      </div>
+      <div class="price-wrap clearfix">
+        <span class="price fl">{{item.price}}</span>
+        <span class="volume fr">已售{{item.salesVolume}}</span>
+      </div>
+    </div>
+  </li>
+  {{/each}}
+</script>
+<script>
+  var render = template('template-live', homeObj);
+  document.querySelector('.product').innerHTML = render;
+</script>
 
 </html>
